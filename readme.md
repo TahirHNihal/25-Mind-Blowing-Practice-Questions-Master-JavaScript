@@ -100,5 +100,37 @@ console.log(reverseNumFunc(123));
 7 - Write a JavaScript function that checks wherher a passed string is palindrome or not
 
 ```
+const checkPal = (str) => {
+  let reverseStr = str.split("").reverse().join("");
+  if (str === reverseStr) {
+    console.log(`The string (${str}) are palindrome`);
+  } else {
+    console.log(`The string (${str}) aren't palindrome`);
+  }
+};
+checkPal("lol");
+```
+
+8 - Write a JavaScript function that returns a passed string with latters in alphabetival order
 
 ```
+const stringToAlphaOrder = (str) => {
+  return str.split("").sort().join("");
+};
+let output = stringToAlphaOrder("dcba");
+console.log(output);
+```
+
+9 - Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case
+
+```
+const convertFirstLatterUpper = (str) => {
+  let finalStr = str.split(" ").map((word) => {
+    return word.charAt(0).toUpperCase() + word.substring(1);
+  });
+  console.log(finalStr);
+};
+convertFirstLatterUpper("tahir hossain nihal");
+```
+
+10 -
